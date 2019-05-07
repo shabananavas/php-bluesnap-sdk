@@ -54,6 +54,7 @@ class Api
     public static function post($endpoint, $data, $id_in_header)
     {
         $client = self::getClient();
+
     //    $clientHandler = $client->getConfig('handler');
     //    $tapMiddleware = Middleware::tap(function ($request) {
     //        echo "Request data:\n\ncontent-type: ". $request->getHeaderLine('Content-Type') ."\n";
