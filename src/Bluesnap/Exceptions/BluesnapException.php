@@ -3,18 +3,9 @@
 namespace Bluesnap\Exceptions;
 
 use Exception;
-use Bluesnap\Contracts\ExceptionInterface;
 
-abstract class BluesnapException extends Exception implements ExceptionInterface
+abstract class BluesnapException extends Exception
 {
-    private $string;
-    private $trace;
-
-    protected $message = '';
-    protected $code = 0;
-    protected $file;
-    protected $line;
-
     public function __construct($message = null, $code = 0)
     {
         if (!$message)
