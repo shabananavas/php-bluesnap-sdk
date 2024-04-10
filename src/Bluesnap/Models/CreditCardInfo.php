@@ -28,4 +28,9 @@ class CreditCardInfo extends Model
      * @var BillingContactInfo
      */
     public $billingContactInfo;
+
+    /**
+     * @var string
+     */
+    public $status;
 }
