@@ -12,6 +12,12 @@ class VaultedShopper
         return Adapter::get('VaultedShopper', $id);
     }
 
+    public static function getByMerchantId($id = null)
+    {
+        $options = ['endpoint_extension' => 'merchant'];
+        return Adapter::get('VaultedShopper', $id, $options);
+    }
+
     public static function create($data)
     {
         return Adapter::create('VaultedShopper', $data, [
