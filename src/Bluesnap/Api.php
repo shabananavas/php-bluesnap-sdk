@@ -33,7 +33,7 @@ class Api
     {
         $client = self::getClient();
 
-        $args = null;
+        $args = [];
         if ($query_params && is_array($query_params)) {
             $args = [ 'query' => $query_params ];
         }
