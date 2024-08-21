@@ -12,7 +12,7 @@ class PaymentSources extends Model
         parent::__construct($data);
     }
 
-    protected $children = ['creditCardInfo' => self::COLLECTION, 'ecpInfo' => self::COLLECTION];
+    protected $children = ['creditCardInfo' => self::COLLECTION, 'ecpInfo' => self::COLLECTION, 'ecpDetails' => self::COLLECTION];
 
     /**
      * @var CreditCardInfo[]
@@ -23,4 +23,9 @@ class PaymentSources extends Model
      * @var EcpInfo[]
      */
     public $ecpInfo;
+
+    /**
+     * @var EcpDetails[]
+     */
+    public $ecpDetails;
 }

@@ -3,26 +3,21 @@
 namespace Bluesnap\Models;
 
 /**
- * Class CreditCardInfo
+ * Class EcpDetails
  */
-class CreditCardInfo extends Model
+class EcpDetails extends Model
 {
     public function __construct($data = null)
     {
         parent::__construct($data);
     }
 
-    protected $children = ['creditCard' => self::ITEM, 'billingContactInfo' => self::ITEM];
+    protected $children = ['ecp' => self::ITEM, 'billingContactInfo' => self::ITEM];
 
     /**
-     * @var string
+     * @var Ecp
      */
-    public $pfToken;
-
-    /**
-     * @var CreditCard
-     */
-    public $creditCard;
+    public $ecp;
 
     /**
      * @var BillingContactInfo

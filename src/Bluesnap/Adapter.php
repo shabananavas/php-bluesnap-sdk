@@ -14,11 +14,15 @@ class Adapter
     {
         $query_params = Utility::getOption($options, 'query_params', null);
         $target_parameter = Utility::getOption($options, 'target_parameter', null);
+        $endpoint_extension = Utility::getOption($options, 'endpoint_extension', null);
 
         try
         {
             $is_collection = $id === null;
             $endpoint = Utility::getModelEndpoint($model, $id);
+            if ($endpoint_extension) {
+                $endpoint .= "/{$endpoint_extension}";
+            }
 
             $response = Api::get($endpoint, $id, $query_params);
             $response = Utility::setupModel($model, $response, $is_collection, $target_parameter);
